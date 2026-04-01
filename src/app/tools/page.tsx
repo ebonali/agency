@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   Calculator, CreditCard, Search, ArrowRight, ShieldCheck, Clock, Zap,
   GraduationCap, BookOpen, CircleDollarSign, Landmark, FileText, Calendar,
-  FileImage, FileDown, Ruler, Filter,
+  FileImage, FileDown, Ruler, Filter, Contact2,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -32,9 +32,19 @@ const TOOLS: Tool[] = [
     icon: FileImage, href: "/tools/jpg-to-pdf", badge: "New", category: "pdf",
   },
   {
+    title: "Electricity Bill Calculator",
+    description: "Calculate your monthly electricity bill for DESCO, DPDC, BPDB, NESCO with 2025-26 rates.",
+    icon: Zap, href: "/tools/electricity-bill-calculator-bd", badge: "New", category: "finance",
+  },
+  {
     title: "Compress PDF",
     description: "Reduce PDF file size for online forms & email. No server upload required.",
     icon: FileDown, href: "/tools/compress-pdf", badge: "New", category: "pdf",
+  },
+  {
+    title: "Family Card Checker",
+    description: "Check eligibility for TCB Smart Family Card based on BD government rules.",
+    icon: Contact2, href: "/tools/family-card-eligibility-bd", badge: "New", category: "finance",
   },
   {
     title: "Nagad Calculator",
@@ -60,6 +70,11 @@ const TOOLS: Tool[] = [
     title: "Loan / EMI Calculator",
     description: "Calculate monthly EMI and total interest for loans in Bangladesh.",
     icon: Landmark, href: "/tools/loan-calculator-bd", badge: "New", category: "finance",
+  },
+  {
+    title: "Zakat Calculator",
+    description: "Calculate your Zakat accurately based on gold, silver, and cash holdings.",
+    icon: CircleDollarSign, href: "/tools/zakat-calculator-bd", badge: "New", category: "finance",
   },
   {
     title: "Number to Word",

@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/age-calculator-bd',
     '/tools/jpg-to-pdf',
     '/tools/compress-pdf',
+    '/tools/family-card-eligibility-bd',
   ]
 
   return toolRoutes.map((route) => ({
