@@ -13,11 +13,8 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@sentry/nextjs": "^10.47.0",
-=======
     "@opennextjs/cloudflare": "^1.18.0",
->>>>>>> 7e834f31d8ce3f15b2ffe3a82f2ee7d3b87ea920
     "browser-image-compression": "^2.0.2",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",
