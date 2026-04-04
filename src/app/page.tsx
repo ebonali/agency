@@ -1,6 +1,16 @@
 import { ArrowRight, ShieldCheck, Zap, Clock, Lock, Globe, Server, CreditCard, GraduationCap, Ruler, FileImage, Calculator, Landmark, FileDown, Calendar, FileText, Contact2, CircleDollarSign } from "lucide-react";
 import HomeSearch from "./components/HomeSearch";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ridoway Agency | বাংলাদেশের জন্য সেরা অনলাইন টুলস হাব",
+  description: "বিকাশ চার্জ ক্যালকুলেটর, জিপিএ ক্যালকুলেটর, আয়কর নির্ণয়, এবং পিডিএফ টুলস সহ প্রয়োজনীয় সব অনলাইন টুলস এখন এক জায়গায়। ১০০% নিরাপদ এবং দ্রুত।",
+  alternates: {
+    canonical: "https://ridoway.agency",
+  }
+};
+
 
 const FEATURED_TOOLS = [
   { title: "bKash Calculator", desc: "ক্যাশ আউট চার্জ হিসাব করুন", icon: CreditCard, href: "/tools/bkash-charge-calculator-bd", color: "from-pink-500 to-rose-600" },
