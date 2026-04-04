@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Hind_Siliguri } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,14 +42,7 @@ export const metadata: Metadata = {
     description: "Free Online Tools for Bangladesh — Fast, Private, Accurate.",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://ridoway.agency" },
 };
-
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Tools", href: "/tools" },
-  { label: "PDF Tools", href: "/tools/jpg-to-pdf" },
-];
 
 const FOOTER_TOOLS = [
   { label: "bKash Calculator", href: "/tools/bkash-charge-calculator-bd" },
@@ -77,7 +71,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager - GTM-5ZPX9K96 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -87,7 +80,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-5ZPX9K96');`,
           }}
         />
-        {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-M91L4NQHFT"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -99,7 +91,6 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Microsoft Clarity - w4mevgb8e3 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(c,l,a,r,i,t,y){
@@ -111,7 +102,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white" suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
             src="https://www.googletagmanager.com/ns.html?id=GTM-5ZPX9K96"
@@ -120,38 +110,15 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+        
         <div className="relative flex min-h-screen flex-col">
-
-          {/* ─── NAVBAR ─── */}
-          <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/80 backdrop-blur-xl">
-            <div className="container mx-auto flex h-14 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-6xl">
-              <Link href="/" className="flex items-center gap-2.5 group" aria-label="Ridoway Agency Home">
-                <svg viewBox="0 0 76 65" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white group-hover:text-emerald-400 transition-colors"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="currentColor"/></svg>
-                <span className="text-sm font-black uppercase tracking-widest">Ridoway</span>
-              </Link>
-              <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
-                {NAV_LINKS.map(link => (
-                  <Link key={link.href} href={link.href}
-                    className="px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-zinc-500 hover:text-white transition-colors rounded-lg hover:bg-white/5">
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-              <Link href="/tools"
-                className="rounded-lg bg-white px-5 py-2 text-[11px] font-black uppercase tracking-widest text-black transition-all hover:bg-zinc-200 active:scale-95">
-                Explore Tools
-              </Link>
-            </div>
-          </header>
-
-          {/* ─── MAIN ─── */}
+          <Navbar />
+          
           <main className="flex-1">{children}</main>
 
-          {/* ─── FOOTER ─── */}
           <footer className="border-t border-white/5 bg-black pt-16 pb-8">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                {/* Brand */}
                 <div className="md:col-span-1">
                   <Link href="/" className="flex items-center gap-2 mb-4">
                     <svg viewBox="0 0 76 65" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="currentColor"/></svg>
@@ -162,7 +129,6 @@ export default function RootLayout({
                   </p>
                 </div>
 
-                {/* Popular Tools */}
                 <div>
                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-5">Popular Tools</h4>
                   <ul className="space-y-2.5">
@@ -174,7 +140,6 @@ export default function RootLayout({
                   </ul>
                 </div>
 
-                {/* Company */}
                 <div>
                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-5">Company</h4>
                   <ul className="space-y-2.5">
@@ -186,18 +151,16 @@ export default function RootLayout({
                   </ul>
                 </div>
 
-                {/* Status */}
                 <div>
                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-5">Status</h4>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-xs text-zinc-400 font-bold">All Systems Operational</span>
                   </div>
-                  <p className="text-[10px] text-zinc-700 font-medium">11 tools live • Updated daily</p>
+                  <p className="text-[10px] text-zinc-700 font-medium">13 tools live • Updated daily</p>
                 </div>
               </div>
 
-              {/* Bottom */}
               <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-[10px] text-zinc-700 font-bold uppercase tracking-widest">
                   © {new Date().getFullYear()} Ridoway Agency. All rights reserved.
@@ -210,7 +173,6 @@ export default function RootLayout({
           </footer>
         </div>
 
-        {/* JSON-LD: Organization */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",

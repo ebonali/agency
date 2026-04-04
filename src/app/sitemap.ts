@@ -1,12 +1,20 @@
 import { MetadataRoute } from 'next'
 
+/**
+ * Ridoway Agency - Sitemap Generator
+ * Lists all functional, privacy-first tools.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ridoway.agency'
 
-  // List of all tool routes
-  const toolRoutes = [
+  // Standard routes
+  const mainRoutes = [
     '',
     '/tools',
+  ]
+
+  // Actual tool pages discovered in the filesystem
+  const toolRoutes = [
     '/tools/bkash-charge-calculator-bd',
     '/tools/nagad-charge-calculator',
     '/tools/hsc-gpa-calculator-bd',
@@ -19,12 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/jpg-to-pdf',
     '/tools/compress-pdf',
     '/tools/family-card-eligibility-bd',
+    '/tools/electricity-bill-calculator-bd',
   ]
 
-  return toolRoutes.map((route) => ({
+  const allRoutes = [...mainRoutes, ...toolRoutes]
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly',
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency: route === '' ? 'daily' : 'weekly' as any,
+    priority: route === '' ? 1.0 : 0.8,
   }))
 }

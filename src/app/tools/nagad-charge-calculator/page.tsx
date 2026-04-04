@@ -231,7 +231,7 @@ export default function NagadChargeCalculatorPage() {
         <div className="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="flex items-center gap-8">
             <Link href="/tools/bkash-charge-calculator-bd" className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-600 hover:text-white transition-all">bKash calc</Link>
-            <Link href="/tools/gpa-calculator-bd" className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-600 hover:text-white transition-all">GPA calc</Link>
+            <Link href="/tools/hsc-gpa-calculator-bd" className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-600 hover:text-white transition-all">GPA calc</Link>
           </div>
           <div className="text-[10px] text-zinc-800 font-bold uppercase tracking-[0.3em]">
             © {new Date().getFullYear()} Ridoway Agency Ops.
