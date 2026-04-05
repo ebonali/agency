@@ -155,7 +155,7 @@ export default function Navbar() {
                 <div className="mt-auto pt-12">
                    <div className="flex items-center gap-2 mb-4">
                      <Sparkles className="h-4 w-4 text-emerald-500" />
-                     <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 italic underline decoration-emerald-500/50"> बांग्लादेश টুলস হাব</span>
+                     <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 underline decoration-emerald-500/50"> বাংলাদেশে টুলস হাব</span>
                    </div>
                    <p className="text-[10px] text-zinc-700 font-bold uppercase tracking-widest">
                      100% Client-Side • No Data Stored

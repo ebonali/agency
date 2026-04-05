@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   Calculator, CreditCard, Search, ArrowRight, ShieldCheck, Clock, Zap,
   GraduationCap, BookOpen, CircleDollarSign, Landmark, FileText, Calendar,
-  FileImage, FileDown, Ruler, Filter, Contact2,
+  FileImage, FileDown, Ruler, Filter, Contact2, Fuel,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -72,11 +72,6 @@ const TOOLS: Tool[] = [
     icon: Landmark, href: "/tools/loan-calculator-bd", badge: "New", category: "finance",
   },
   {
-    title: "Zakat Calculator",
-    description: "Calculate your Zakat accurately based on gold, silver, and cash holdings.",
-    icon: CircleDollarSign, href: "/tools/zakat-calculator-bd", badge: "New", category: "finance",
-  },
-  {
     title: "Number to Word",
     description: "Convert BDT amounts and digits into English and Bangla words.",
     icon: FileText, href: "/tools/number-to-word-converter-bd", badge: "New", category: "converter",
@@ -85,6 +80,11 @@ const TOOLS: Tool[] = [
     title: "Land Area Converter",
     description: "Convert Katha, Bigha, Decimal, Acre & 27+ BD land units instantly.",
     icon: Ruler, href: "/tools/land-area-converter-bd", badge: "New", category: "converter",
+  },
+  {
+    title: "Fuel Price in Bangladesh",
+    description: "Check today's Petrol, Octane, Diesel and Kerosene prices with cost calculator.",
+    icon: Fuel, href: "/tools/fuel-price-bd", badge: "Live", category: "finance",
   },
   {
     title: "Age Calculator",

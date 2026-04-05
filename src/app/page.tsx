@@ -80,7 +80,7 @@ export default function HomePage() {
 
           {/* Subtitle */}
           <p className="text-center text-base md:text-lg text-zinc-400 font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
-            ক্যালকুলেটর, কনভার্টার, PDF টুলস — সবকিছু একসাথে। 
+            ক্যালকুলেটর, কনভার্টার, PDF টুলস — সবকিছু একসাথে।
             <span className="text-zinc-500"> ১০০% নিরাপদ এবং আপনার গোপনীয়তা আমাদের কাছে অগ্রাধিকার।</span>
           </p>
 
@@ -248,13 +248,13 @@ export default function HomePage() {
           ══════════════════════════════════════════════════════ */}
       <section className="relative py-20 md:py-28">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        
+
         <div className="container mx-auto px-4 max-w-5xl relative z-10">
           <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden">
             {/* CTA Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/50 via-zinc-900/80 to-black" />
             <div className="absolute inset-0 border border-emerald-500/10 rounded-[2rem] md:rounded-[3rem]" />
-            
+
             {/* Mesh */}
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-[100px]" />
             <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-cyan-500/5 rounded-full blur-[80px]" />
@@ -264,7 +264,7 @@ export default function HomePage() {
                 <Zap className="h-3 w-3 text-emerald-400" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-400">Free Forever</span>
               </div>
-              
+
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-5 leading-tight">
                 এখনই শুরু করুন,{" "}
                 <br className="hidden md:block" />

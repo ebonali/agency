@@ -173,15 +173,28 @@ export default function RootLayout({
           </footer>
         </div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Ridoway Agency",
-          "url": "https://ridoway.agency",
-          "logo": "https://ridoway.agency/favicon.ico",
-          "description": "Free online tools for Bangladesh — calculators, converters, PDF tools.",
-          "sameAs": []
-        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Ridoway Agency",
+            "url": "https://ridoway.agency",
+            "logo": "https://ridoway.agency/favicon.ico",
+            "description": "Free online tools for Bangladesh — calculators, converters, PDF tools.",
+            "sameAs": []
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Ridoway Agency",
+            "url": "https://ridoway.agency",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ridoway.agency/tools?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]) }} />
       </body>
     </html>
   );
